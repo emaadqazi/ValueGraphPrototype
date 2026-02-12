@@ -74,15 +74,21 @@ export const seedCommunities: Community[] = [
   updatedAt: now,
 }))
 
+// Floor Plans - need to reference actual IDs
+const mattamyMississauga = seedBuilders.find(b => b.builderName === "Mattamy Homes (Mississauga)")!
+const villageHomes = seedProducts.find(p => p.productName === "3-Storey Back to Back Condo Village Homes")!
+const condoTownhomes = seedProducts.find(p => p.productName === "3-Storey Condo Street Townhomes - C/E")!
+const theNine3 = seedCommunities.find(c => c.communityName === "The Nine 3 (Derry & Britannia Phase 1A)")!
+
 export const seedFloorPlans: FloorPlan[] = [
-  { builder: "Mattamy Homes (Mississauga)", productType: "3-Storey Back to Back Condo Village Homes", community: "The Nine 3 (Derry & Britannia Phase 1A)", floorPlanName: "Aldgate End", status: "Active", squareFeet: 1343, bed: 3, bath: 2.5, elevation: "TA", price: 771990, bonus: -17424, maintenance: 106, carryingCost: 3538.78 },
-  { builder: "Mattamy Homes (Mississauga)", productType: "3-Storey Back to Back Condo Village Homes", community: "The Nine 3 (Derry & Britannia Phase 1A)", floorPlanName: "Brixton", status: "Active", squareFeet: 1442, bed: 3, bath: 2.5, elevation: "TA", price: 749990, bonus: -17424, maintenance: 106, carryingCost: 3440.95 },
-  { builder: "Mattamy Homes (Mississauga)", productType: "3-Storey Back to Back Condo Village Homes", community: "The Nine 3 (Derry & Britannia Phase 1A)", floorPlanName: "Brondesbury Corner", status: "Active", squareFeet: 1607, bed: 3, bath: 2.5, elevation: "TA", price: 816990, bonus: -17424, maintenance: 106, carryingCost: 3738.88 },
-  { builder: "Mattamy Homes (Mississauga)", productType: "3-Storey Back to Back Condo Village Homes", community: "The Nine 3 (Derry & Britannia Phase 1A)", floorPlanName: "Richmond End", status: "Active", squareFeet: 1634, bed: 3, bath: 2.5, elevation: "TA", price: 831990, bonus: -17424, maintenance: 106, carryingCost: 3805.58 },
-  { builder: "Mattamy Homes (Mississauga)", productType: "3-Storey Condo Street Townhomes - C/E", community: "The Nine 3 (Derry & Britannia Phase 1A)", floorPlanName: "Northwick", status: "Active", squareFeet: 1793, bed: 3, bath: 3.5, elevation: "A", price: 849990, bonus: -17424, maintenance: 0, carryingCost: 3893.15 },
-  { builder: "Mattamy Homes (Mississauga)", productType: "3-Storey Condo Street Townhomes - C/E", community: "The Nine 3 (Derry & Britannia Phase 1A)", floorPlanName: "Paddington", status: "Active", squareFeet: 1940, bed: 4, bath: 3.5, elevation: "B", price: 874990, bonus: -17424, maintenance: 0, carryingCost: 4004.18 },
-  { builder: "Mattamy Homes (Mississauga)", productType: "3-Storey Condo Street Townhomes - C/E", community: "The Nine 3 (Derry & Britannia Phase 1A)", floorPlanName: "Preston End", status: "Active", squareFeet: 2198, bed: 4, bath: 3.5, elevation: "C", price: 939990, bonus: -17424, maintenance: 0, carryingCost: 4293.15 },
-  { builder: "Mattamy Homes (Mississauga)", productType: "3-Storey Condo Street Townhomes - C/E", community: "The Nine 3 (Derry & Britannia Phase 1A)", floorPlanName: "Uxbridge End", status: "Active", squareFeet: 2420, bed: 4, bath: 3.5, elevation: "D", price: 969990, bonus: -17424, maintenance: 0, carryingCost: 4426.42 },
+  { builder: mattamyMississauga.id, productType: villageHomes.id, community: theNine3.id, floorPlanName: "Aldgate End", status: "Active", squareFeet: 1343, bed: 3, bath: 2.5, elevation: "TA", price: 771990, bonus: -17424, maintenance: 106, carryingCost: 3538.78 },
+  { builder: mattamyMississauga.id, productType: villageHomes.id, community: theNine3.id, floorPlanName: "Brixton", status: "Active", squareFeet: 1442, bed: 3, bath: 2.5, elevation: "TA", price: 749990, bonus: -17424, maintenance: 106, carryingCost: 3440.95 },
+  { builder: mattamyMississauga.id, productType: villageHomes.id, community: theNine3.id, floorPlanName: "Brondesbury Corner", status: "Active", squareFeet: 1607, bed: 3, bath: 2.5, elevation: "TA", price: 816990, bonus: -17424, maintenance: 106, carryingCost: 3738.88 },
+  { builder: mattamyMississauga.id, productType: villageHomes.id, community: theNine3.id, floorPlanName: "Richmond End", status: "Active", squareFeet: 1634, bed: 3, bath: 2.5, elevation: "TA", price: 831990, bonus: -17424, maintenance: 106, carryingCost: 3805.58 },
+  { builder: mattamyMississauga.id, productType: condoTownhomes.id, community: theNine3.id, floorPlanName: "Northwick", status: "Active", squareFeet: 1793, bed: 3, bath: 3.5, elevation: "A", price: 849990, bonus: -17424, maintenance: 0, carryingCost: 3893.15 },
+  { builder: mattamyMississauga.id, productType: condoTownhomes.id, community: theNine3.id, floorPlanName: "Paddington", status: "Active", squareFeet: 1940, bed: 4, bath: 3.5, elevation: "B", price: 874990, bonus: -17424, maintenance: 0, carryingCost: 4004.18 },
+  { builder: mattamyMississauga.id, productType: condoTownhomes.id, community: theNine3.id, floorPlanName: "Preston End", status: "Active", squareFeet: 2198, bed: 4, bath: 3.5, elevation: "C", price: 939990, bonus: -17424, maintenance: 0, carryingCost: 4293.15 },
+  { builder: mattamyMississauga.id, productType: condoTownhomes.id, community: theNine3.id, floorPlanName: "Uxbridge End", status: "Active", squareFeet: 2420, bed: 4, bath: 3.5, elevation: "D", price: 969990, bonus: -17424, maintenance: 0, carryingCost: 4426.42 },
 ].map((fp) => ({
   id: uid(),
   division: "GTA",
